@@ -7,14 +7,15 @@ void setup() {
     // Set key pins as inputs with pullups
   }
 
-  // INSERT CODE HERE: Set LED pin as output
-  // INSERT CODE HERE: start OFF if active-low LED
+  // Set LED pin as output
+  pinMode(LED_PIN, OUTPUT);
+  // start OFF if active-low LED
+  digitalWrite(LED_PIN, HIGH);
 }
 
 void loop() {
   for (size_t i = 0; i < N; i++) {
-    if ( ?????? ) { // if button pressed (ie, pin is connected to ground)
-    
+    if (digitalRead(key_pins[i]) == LOW) { // if button pressed (ie, pin is connected to ground)
       digitalWrite(LED_PIN, LOW);   // LED on
       delay(200);
       digitalWrite(LED_PIN, HIGH);  // LED off
