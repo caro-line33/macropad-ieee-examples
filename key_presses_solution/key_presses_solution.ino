@@ -12,8 +12,9 @@ void setup() {
 }
 
 void loop() {
-  for (size_t i = 0; i < N; i++) {
-    if (digitalRead(key_pins[i]) == LOW) { // if button pressed (ie, pin is connected to ground)
+  for (size_t i = 0; i < N; i++) { // loop thru pins
+    if (digitalRead(key_pins[i]) == LOW) { // if pressed
+      // Button press action (for example, flash LED)
       digitalWrite(LED_PIN, LOW);   // LED on
       delay(200);
       digitalWrite(LED_PIN, HIGH);  // LED off
