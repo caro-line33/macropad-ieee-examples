@@ -8,7 +8,7 @@ void setup() {
 void loop() {
   digitalWrite(17, HIGH); // Turn LED on
   delay(500);             // Wait 500 ms
-  serial.println("Hi!");
+  Serial.println("Hi!");
   digitalWrite(17, LOW);  // Turn LED off
   delay(500);             // Wait 500 ms
   Serial.println("Bye!");
