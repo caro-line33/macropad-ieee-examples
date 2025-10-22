@@ -1,6 +1,7 @@
+int pin1 = 16;
+int pin2 = 10;
+
 void setup() {
-  int pin1 = 16;
-  int pin2 = 10;
   // set pins to INPUT_PULLUP. HIGH voltage when floating.
   pinMode(pin1, INPUT_PULLUP);
   pinMode(pin2, INPUT_PULLUP);
