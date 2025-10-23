@@ -4,6 +4,10 @@ int pin2 = 10;
 void setup() {
   pinMode(pin1, INPUT_PULLUP);
   pinMode(pin2, INPUT_PULLUP);
+  pinMode(17, OUTPUT);
+  pinMode(30, OUTPUT);
+  digitalWrite(17, HIGH);
+  digitalWrite(30, HIGH); 
 }
 
 void loop() {
@@ -14,11 +18,20 @@ void loop() {
   bool press2 = digitalRead(pin2) == LOW;
 
   if(press1){ // if button 1 pressed,
-    Serial.println("bye"); // print Bye
+    digitalWrite(17, LOW);
+    digitalWrite(30, LOW);
+    Serial.println("button 1");
   }
 
-  if (press2){ // if button 2 pressed,
-    Serial.println("hi"); // print Hi
+  else if (press2){ // if button 2 pressed,
+    digitalWrite(17, LOW);
+    digitalWrite(30, LOW);
+    Serial.println("button 2");
+  }
+
+  else{
+    digitalWrite(17, HIGH);
+    digitalWrite(30, HIGH);
   }
   delay(100); // short delay so we don't sense
   // 10000 button presses 
